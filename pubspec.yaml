@@ -44,6 +44,9 @@ dependencies:
   lottie:
 # Data Storage
   shared_preferences: ^2.2.2
+# Notifications
+  flutter_local_notifications: ^13.0.0
+  permission_handler: ^11.1.0
 
 
 

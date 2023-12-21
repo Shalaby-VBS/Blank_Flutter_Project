@@ -1,3 +1,4 @@
+import 'package:blank_project/core/widgets/floating_bottom_navigation_bar.dart';
 import 'package:blank_project/modules/home/logic/internet_connection/internet_connection_cubit.dart';
 import 'package:blank_project/modules/home/logic/localization/localization_cubit.dart';
 import 'package:blank_project/modules/home/ui/screens/home_screen.dart';
@@ -67,7 +68,7 @@ class MyApp extends StatelessWidget {
                   }
                   return supportedLocales.first;
                 },
-                home: const HomeScreen(),
+                home: const FloatingBottomNavigationBar(),
               ),
             );
           } else {
