@@ -1,47 +1,39 @@
+import 'package:blank_project/core/localizations/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../modules/home/logic/localization/localization_cubit.dart';
-import '../../modules/home/logic/localization/localization_state.dart';
 import '../constants/app_assets.dart';
-import '../constants/app_strings.dart';
-import '../enums/enums.dart';
-import '../helpers/shared_preferences_helper.dart';
 
-class LocalizationButton extends StatelessWidget {
+class LocalizationButton extends StatefulWidget {
   const LocalizationButton({super.key});
 
   @override
+  State<LocalizationButton> createState() => _LocalizationButtonState();
+}
+
+class _LocalizationButtonState extends State<LocalizationButton> {
+  @override
   Widget build(BuildContext context) {
-    return BlocBuilder<LocalizationCubit, LocalizationState>(
-      builder: (context, state) {
-        return IconButton(
-          onPressed: () {
-            if (state is ChangeAppLanguage) {
-              if (state.languageCode == 'ar') {
-                SharedPreferencesHelper.setData(
-                    AppStrings.language, 'en');
-                BlocProvider.of<LocalizationCubit>(context)
-                    .changeLanguage(LanguagesTypesEnums.english);
-              } else {
-                SharedPreferencesHelper.setData(
-                    AppStrings.language, 'ar');
-                BlocProvider.of<LocalizationCubit>(context)
-                    .changeLanguage(LanguagesTypesEnums.arabic);
-              }
-            }
-          },
-          icon: DecoratedBox(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(32.r),
-              color: Colors.grey,
-            ),
-            child: Lottie.asset(AppLotties.localization),
-          ),
-        );
+    return IconButton(
+      onPressed: () async {
+        await AppLocalizations.toggleLocale();
+        setState(() {});
+        //
+        // if (context.locale == AppLocalizations.arabic) {
+        //   SharedPreferencesHelper.setData(SharedPreferencesKeys.language, 'ar');
+        // }
+        // if (context.locale == AppLocalizations.english) {
+        //   SharedPreferencesHelper.setData(SharedPreferencesKeys.language, 'en');
+        // }
       },
+      icon: DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(32.r),
+          color: Colors.grey,
+        ),
+        child: Lottie.asset(AppLotties.localization),
+      ),
     );
   }
 }

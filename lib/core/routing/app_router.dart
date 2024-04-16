@@ -5,6 +5,9 @@ import '../../modules/home/ui/screens/home_screen.dart';
 import 'routes.dart';
 
 class AppRouter {
+  static final GlobalKey<NavigatorState> navigatorKey =
+      GlobalKey<NavigatorState>();
+  static BuildContext? currentContext = navigatorKey.currentContext;
   Route generateRoute(RouteSettings settings) {
     // MARK: - This arguments variable is used to pass data between routes.
     // final arguments = settings.arguments;

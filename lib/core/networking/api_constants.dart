@@ -1,6 +1,8 @@
 class ApiUrls {
+  // MARK: - ✏️ Base Url.
   static const String baseUrl = "https://vcare.integration25.com/api/";
 
+  // MARK: - End-Points.
   static const String login = "auth/login";
 }
 
@@ -21,5 +23,4 @@ class ApiErrors {
   static const String cancel = "Cancel";
   static const String connectionTimeout = "Connection Timeout Error";
   static const String noInternetConnection = "No Internet Connection Error";
-
 }

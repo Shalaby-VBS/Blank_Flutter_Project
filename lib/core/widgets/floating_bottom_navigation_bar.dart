@@ -6,15 +6,16 @@ import '../../modules/notifications/ui/screens/notifications_screen.dart';
 import '../../modules/profile/ui/screens/profile_screen.dart';
 import '../../modules/settings/ui/screens/settings_screen.dart';
 
-
 class FloatingBottomNavigationBar extends StatefulWidget {
   const FloatingBottomNavigationBar({Key? key}) : super(key: key);
 
   @override
-  State<FloatingBottomNavigationBar> createState() => _FloatingBottomNavigationBarState();
+  State<FloatingBottomNavigationBar> createState() =>
+      _FloatingBottomNavigationBarState();
 }
 
-class _FloatingBottomNavigationBarState extends State<FloatingBottomNavigationBar> {
+class _FloatingBottomNavigationBarState
+    extends State<FloatingBottomNavigationBar> {
   int screenIndex = 0;
 
   final List<Widget> _screens = [
@@ -26,15 +27,14 @@ class _FloatingBottomNavigationBarState extends State<FloatingBottomNavigationBa
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      body:  Stack(
+      body: Stack(
         children: [
           _screens.elementAt(screenIndex),
           Padding(
             padding: EdgeInsets.all(20.w),
             child: Align(
-              alignment: const Alignment(0.0,1.0),
+              alignment: const Alignment(0.0, 1.0),
               child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(14.r)),
                   child: BottomNavigationBar(
@@ -72,8 +72,7 @@ class _FloatingBottomNavigationBarState extends State<FloatingBottomNavigationBa
                         label: 'Profile',
                       ),
                     ],
-                  )
-              ),
+                  )),
             ),
           ),
         ],

@@ -1,11 +1,12 @@
 import 'package:blank_project/core/helpers/spaces.dart';
-import 'package:blank_project/core/utils/app_utils.dart';
 import 'package:blank_project/modules/home/logic/internet_connection/internet_connection_cubit.dart';
 import 'package:blank_project/modules/home/logic/internet_connection/internet_connection_state.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/localizations/locale_keys.dart';
 import '../../../../core/widgets/change_theme_switch.dart';
 import '../../../../core/widgets/localization_button.dart';
 
@@ -23,7 +24,8 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Icon(Icons.wifi_rounded, color: Colors.white, size: 24.w),
                   horizontalSpace(10.w),
-                  Text(state.internetState, style: const TextStyle(color: Colors.white)),
+                  Text(state.internetState,
+                      style: const TextStyle(color: Colors.white)),
                 ],
               ),
               backgroundColor: Colors.green,
@@ -50,7 +52,8 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Icon(Icons.wifi_off_rounded, color: Colors.white, size: 24.w),
                   horizontalSpace(10.w),
-                  Text(state.internetState, style: const TextStyle(color: Colors.white)),
+                  Text(state.internetState,
+                      style: const TextStyle(color: Colors.white)),
                 ],
               ),
               backgroundColor: Colors.red,
@@ -74,7 +77,7 @@ class HomeScreen extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text(AppUtils.translate(context, 'homeScreen')),
+          title: Text(LocaleKeys.homeScreen.tr()),
           actions: const [
             ChangeThemeSwitch(),
             LocalizationButton(),

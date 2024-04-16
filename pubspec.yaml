@@ -14,6 +14,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
 # Localization
+  easy_localization:
   flutter_localizations:
     sdk: flutter
 # Code generator.
@@ -67,10 +68,24 @@ flutter:
     - assets/lotties/
     - assets/translations/
 
-  # fonts:
-  #   - family: ProximaSoft
-  #     fonts:
-  #       - asset: assets/fonts/ProximaSoft-Bold.ttf
-  #       - asset: assets/fonts/ProximaSoft-semiBold.ttf
-  #       - asset: assets/fonts/ProximaSoft-Medium.ttf
-  #       - asset: assets/fonts/ProximaSoft-Regular.ttf
+  fonts:
+     - family: Kanit
+       fonts:
+         - asset: assets/fonts/Kanit/Kanit-Black.ttf
+         - asset: assets/fonts/Kanit/Kanit-BlackItalic.ttf
+         - asset: assets/fonts/Kanit/Kanit-Bold.ttf
+         - asset: assets/fonts/Kanit/Kanit-BoldItalic.ttf
+         - asset: assets/fonts/Kanit/Kanit-ExtraBold.ttf
+         - asset: assets/fonts/Kanit/Kanit-ExtraBoldItalic.ttf
+         - asset: assets/fonts/Kanit/Kanit-ExtraLight.ttf
+         - asset: assets/fonts/Kanit/Kanit-ExtraLightItalic.ttf
+         - asset: assets/fonts/Kanit/Kanit-Italic.ttf
+         - asset: assets/fonts/Kanit/Kanit-Light.ttf
+         - asset: assets/fonts/Kanit/Kanit-LightItalic.ttf
+         - asset: assets/fonts/Kanit/Kanit-Medium.ttf
+         - asset: assets/fonts/Kanit/Kanit-MediumItalic.ttf
+         - asset: assets/fonts/Kanit/Kanit-Regular.ttf
+         - asset: assets/fonts/Kanit/Kanit-SemiBold.ttf
+         - asset: assets/fonts/Kanit/Kanit-SemiBoldItalic.ttf
+         - asset: assets/fonts/Kanit/Kanit-Thin.ttf
+         - asset: assets/fonts/Kanit/Kanit-ThinItalic.ttf
