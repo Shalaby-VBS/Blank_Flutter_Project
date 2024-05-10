@@ -31,6 +31,7 @@ void main() async {
       Permission.notification.request();
     }
   });
+
   runApp(
     EasyLocalization(
       supportedLocales: AppLocalizations.supportedLocales,
